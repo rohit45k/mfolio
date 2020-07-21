@@ -1,0 +1,319 @@
+:root {
+	--primary-color: #333;
+	--secondary-color: #eece1a;
+	--tertiary-color: rgb(39, 199, 100);
+}
+
+* {
+	font-family: "Roboto", "Verdana", serif, cursive;
+	outline: none;
+}
+
+p {
+	color: var(--tertiary-color);
+}
+
+.ml {
+	margin-left: 1rem;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: var(--primary-color);
+}
+
+.carousel {
+	position: relative;
+	height: 90vh;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.carousel__track-container {
+	height: 100%;
+	position: relative;
+	overflow-x: hidden;
+}
+
+.carousel__track {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: relative;
+	height: 100%;
+	transition: transform 300ms ease-in-out;
+}
+
+.carousel__slide {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	min-height: 90vh;
+	height: fit-content;
+}
+
+.carousel__button {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+}
+
+.carousel__button--left {
+	left: -40px;
+}
+.carousel__button--right {
+	right: -40px;
+}
+
+.carousel__button .fa {
+	width: 16px;
+}
+
+.is-hidden {
+	display: none;
+}
+
+header {
+	position: relative;
+	z-index: 10;
+}
+
+.nav-bar {
+	display: flex;
+	height: 10vh;
+	justify-content: space-between;
+	align-items: center;
+	background-attachment: fixed;
+	background: var(--tertiary-color);
+	padding: 0rem 1rem;
+}
+
+.hamburger {
+	width: 47px;
+	height: 47px;
+	border: 3px solid var(--secondary-color);
+}
+
+.bar {
+	display: block;
+	width: 40px;
+	height: 4px;
+	background: var(--secondary-color);
+	margin-left: 4px;
+}
+
+.bar-1 {
+	margin-top: 10px;
+}
+
+.bar-2 {
+	margin-top: 9px;
+}
+
+.bar-3 {
+	margin-top: 9px;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.list button {
+	padding: 0.5rem 0;
+	font-size: 1.3rem;
+	color: var(--secondary-color);
+}
+
+.list button:first-of-type {
+	padding-top: 1rem;
+}
+
+.list button:last-of-type {
+	padding-bottom: 1rem;
+}
+
+.nav {
+	background: var(--tertiary-color);
+	height: 0;
+	overflow: hidden;
+}
+
+.open-nav {
+	height: 100%;
+}
+
+.content {
+	padding: 3rem 1rem;
+}
+
+.content p {
+	margin-top: 1.2rem;
+	font-size: 1.4rem;
+}
+
+.btn {
+	display: inline-block;
+	border: 2px solid var(--secondary-color);
+	padding: 0.7rem 1.2rem;
+	color: var(--secondary-color);
+	margin-top: 1.5rem;
+	font-size: 1.2rem;
+	text-decoration: none;
+	transition: all 0.5s ease-in;
+}
+
+.btn:hover,
+.btn:active {
+	background: var(--secondary-color);
+	color: var(--primary-color);
+}
+
+.underline {
+	width: 50%;
+	margin: 2rem auto;
+	height: 3px;
+	background: var(--secondary-color);
+}
+
+.icons {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.icon {
+	width: 40px;
+	height: 40px;
+	background: var(--tertiary-color);
+}
+
+.head img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.name {
+	display: inline-block;
+	font-size: 2rem;
+	font-weight: 400;
+	color: var(--secondary-color);
+	border-bottom: 3px solid var(--secondary-color);
+}
+
+.carousel__nav {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0.5rem 0rem 0.5rem 1rem;
+}
+
+.carousel__indicator {
+	font-size: 1.3rem;
+	cursor: pointer;
+	border: none;
+	background: transparent;
+	text-align: left;
+}
+
+.carousel__indicator.current-slide {
+	color: rgb(178, 255, 143);
+}
+
+.project-container,
+.skill-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+	row-gap: 2rem;
+	column-gap: 1rem;
+}
+
+.project,
+.skill {
+	width: 155px;
+	height: auto;
+	padding: 1rem 0.5rem;
+	background: var(--tertiary-color);
+	opacity: 0.9;
+	color: var(--primary-color);
+	border-radius: 5px;
+	box-shadow: 1px 1px 2px rgba(0, 250, 0, 0.2);
+    margin-bottom: 1rem;
+}
+
+.project-title,
+.skill-title {
+	font-size: 1.2rem;
+	color: var(--primary-color);
+}
+
+.project img,
+.skill img {
+	width: 100%;
+}
+
+.project-info a,
+.skill-info a {
+	border: 1px solid var(--primary-color);
+	padding: 0.5rem;
+	cursor: pointer;
+	transition: all 0.5s ease-out;
+}
+
+.project-info a:hover,
+.project-info a:active,
+.skill-info a:hover,
+.skill-info a:active {
+	color: var(--tertiary-color);
+	background: var(--primary-color);
+}
+
+form {
+	font-size: 1.2rem;
+}
+
+.form-control * {
+	vertical-align: top;
+	color: var(--secondary-color);
+}
+
+.form-control input,
+.form-control textarea {
+	width: 60%;
+	outline: none;
+	border: none;
+	resize: none;
+	padding: 0.5rem;
+	margin-bottom: 1rem;
+}
+
+input[type="email"] {
+	font-size: 1.2rem;
+}
+
+.form-control input::placeholder,
+.form-control textarea::placeholder {
+	font-size: 1.1rem;
+}
+
+input[type="button"] {
+	font-size: 1.4rem;
+	display: block;
+	width: 80%;
+	margin: auto;
+	padding: 0.6rem;
+	border: none;
+	background: var(--secondary-color);
+	color: var(--primary-color);
+}
